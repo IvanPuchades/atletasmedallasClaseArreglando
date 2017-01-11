@@ -30,7 +30,7 @@ public class AtletaService {
     }
     public void testAtletas(){
         System.out.println(atletaRepository.findByNacionalidad("China"));
-        System.out.println(atletaRepository.findByFechaNacimientoDespues(LocalDate.of(1996, 12, 12)));
+        System.out.println(atletaRepository.findByFechaNacimientoAfter(LocalDate.of(1996, 12, 12)));
     }
 
 }

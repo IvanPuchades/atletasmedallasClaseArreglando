@@ -12,7 +12,7 @@ import java.util.List;
 public interface AtletaRepository extends JpaRepository<Atleta,Long> {
 
     List<Atleta> findByNacionalidad(String nacionalidad);
-    List<Atleta> findByFechaNacimientoDespues(LocalDate fechaNacimiento);
+    List<Atleta> findByFechaNacimientoAfter(LocalDate fechaNacimiento);
 
 
 }

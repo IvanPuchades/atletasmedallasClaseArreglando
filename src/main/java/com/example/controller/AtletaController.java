@@ -55,6 +55,11 @@ public class AtletaController {
         return atletaRepository.findAll().parallelStream()
                 .collect(groupingBy(Atleta::getNacionalidad));
     }
+    @GetMapping("/{id}")
+    public Atleta findById(@PathVariable Long id) {
+        Atleta atleta = atletaRepository.findOne(id);
+        return atleta;
+    }
 
 
 }
